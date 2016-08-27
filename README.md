@@ -8,17 +8,22 @@
 
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [1 Additional files needed](#1-additional-files-needed)
-	- [1.1 About `__init__.py`](#11-about-initpy)
-	- [1.2 About `base.py`](#12-about-basepy)
-	- [1.3 About `local.py`](#13-about-localpy)
-	- [1.4 About `common.py`](#14-about-commonpy)
-	- [1.5 About `secrets.py`](#15-about-secretspy)
-		- [1.5.1 Generating keys in Django style](#151-generating-keys-in-django-style)
+- [1 About the application](#1-about-the-application)
+- [2 Additional files needed](#2-additional-files-needed)
+	- [2.1 About `__init__.py`](#21-about-initpy)
+	- [2.2 About `base.py`](#22-about-basepy)
+	- [2.3 About `local.py`](#23-about-localpy)
+	- [2.4 About `common.py`](#24-about-commonpy)
+	- [2.5 About `secrets.py`](#25-about-secretspy)
+		- [2.5.1 Generating keys in Django style](#251-generating-keys-in-django-style)
 
 <!-- /TOC -->
 
-## 1 Additional files needed
+## 1 About the application
+
+`viewer` is the font-end and `editor` is the back-end.
+
+## 2 Additional files needed
 
 The structure of this app is in such a way that it could be used to run on Heroku or on your local machine.
 
@@ -37,15 +42,15 @@ settings
 
 </pre>
 
-### 1.1 About `__init__.py`
+### 2.1 About `__init__.py`
 
 This file is self-explanatory, if `local.py` is not found `production.py` is loaded.
 
-### 1.2 About `base.py`
+### 2.2 About `base.py`
 
 This file acts as a base to the application; this file is loaded when the application starts.
 
-### 1.3 About `local.py`
+### 2.3 About `local.py`
 
 > This file is optional, but you will need it if you are planning it to run on your local machine.
 
@@ -183,11 +188,11 @@ STATIC_URL = '/static/'
 from .production import *
 ```
 
-### 1.4 About `common.py`
+### 2.4 About `common.py`
 
 This file contains all the common stuff that needs to be used in `local.py` and `base.py`.
 
-### 1.5 About `secrets.py`
+### 2.5 About `secrets.py`
 
 Before you start the Django app, you would have to create `secrets.py` file under `Abies -> settings -> secrets.py`. This file consists of the following
 
@@ -196,7 +201,7 @@ SECRET_KEY = '{{ Your Secret Key }}'# Enter your 50 character secret key
 ```
 Use [1.5.1](#151-generating-keys-in-django-style) to generate the key.
 
-#### 1.5.1 Generating keys in Django style
+#### 2.5.1 Generating keys in Django style
 
 Using Django's crypto package, you can generate random `50` character long key.
 
