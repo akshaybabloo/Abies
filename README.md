@@ -25,11 +25,11 @@ settings
 
 ### 1.1 About `__init__.py`
 
-This file is self explanatory, if `local.py` is not found `production.py` is loaded.
+This file is self-explanatory, if `local.py` is not found `production.py` is loaded.
 
 ### 1.2 About `base.py`
 
-This file acts as a base to the application, this file is loaded when the application starts.
+This file acts as a base to the application; this file is loaded when the application starts.
 
 ### 1.3 About `local.py`
 
