@@ -139,3 +139,5 @@ fabric.properties
 /Abies/settings/settings.ini
 
 Abies/settings.py
+
+Abies/settings/secrets.py
