@@ -4,6 +4,20 @@ An all-in-one web creator.
 
 > Under development
 
+**Table of Contents**
+
+<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [1 Additional files needed](#1-additional-files-needed)
+	- [1.1 About `__init__.py`](#11-about-initpy)
+	- [1.2 About `base.py`](#12-about-basepy)
+	- [1.3 About `local.py`](#13-about-localpy)
+	- [1.4 About `common.py`](#14-about-commonpy)
+	- [1.5 About `secrets.py`](#15-about-secretspy)
+		- [1.5.1 Generating keys in Django style](#151-generating-keys-in-django-style)
+
+<!-- /TOC -->
+
 ## 1 Additional files needed
 
 The structure of this app is in such a way that it could be used to run on Heroku or on your local machine.
