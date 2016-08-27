@@ -1,6 +1,6 @@
 # Abies
 
-An all-in-one web creator.
+:evergreen_tree: A Django based all-in-one web creator.
 
 > Under development
 
