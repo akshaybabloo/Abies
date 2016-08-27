@@ -180,7 +180,7 @@ Before you start the Django app, you would have to create `secrets.py` file unde
 ```python
 SECRET_KEY = '{{ Your Secret Key }}'# Enter your 50 character secret key
 ```
-Use [1.5.1](151-generating-keys-in-django-style) to generate the key.
+Use [1.5.1](#151-generating-keys-in-django-style) to generate the key.
 
 #### 1.5.1 Generating keys in Django style
 
