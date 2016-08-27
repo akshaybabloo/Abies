@@ -6,7 +6,7 @@ An all-in-one web creator.
 
 ## 1 About `secrets.py`
 
-Before you start the Django app, you would have to create `settings.py` file under `Abies -> settings`. This file consists of the following
+Before you start the Django app, you would have to create `secrets.py` file under `Abies -> settings -> secrets.py`. This file consists of the following
 
 ```python
 SECRET_KEY = # Enter your 50 character secret key
