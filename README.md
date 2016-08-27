@@ -16,6 +16,7 @@
 	- [2.4 About `common.py`](#24-about-commonpy)
 	- [2.5 About `secrets.py`](#25-about-secretspy)
 		- [2.5.1 Generating keys in Django style](#251-generating-keys-in-django-style)
+- [3 What next?](#3-what-next)
 
 <!-- /TOC -->
 
@@ -214,4 +215,15 @@ SECRET_KEY = get_random_string(50, chars)
 
 print(SECRET_KEY)
 
+```
+
+## 3 What next?
+
+Once you have all the files in the place, do the following:
+
+Open Terminal (Linux) or Command Prompt (Windows), navigate to `Abies` folder and type in the following, which will create your database file and create an admin user:
+
+```python
+python manage.py migrate
+python manage.py createsuperuser
 ```
