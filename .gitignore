@@ -140,7 +140,5 @@ fabric.properties
 
 Abies/settings.py
 
-Abies/settings/secrets.py
-
 Abies/settings_old.py
 /Abies/db.sqlite3
