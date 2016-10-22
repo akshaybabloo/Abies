@@ -15,7 +15,7 @@ def page_not_found(request):
     img = static('img/404.png')
     home = settings.SHARE_URL
     template = "error.html"
-    context = {"url": home + url, "error": 404, "error_text": "Oops, the page you're <br> looking for does not exist.", "img": img, "home": home, "extended_error_text": "You may want to head back to the homepage.<br/>If you think something is broken, report a problem."}
+    context = {"url": home + url, "error": 404, "error_text": "Oops, the page you're looking for does not exist.", "img": img, "home": home, "extended_error_text": "You may want to head back to the homepage.<br/>If you think something is broken, report a problem."}
     return render(request, template, context)
 
 
@@ -24,5 +24,5 @@ def server_error(request):
     home = settings.SHARE_URL
     img = static('img/500.png')
     template = "error.html"
-    context = {"url": home + url, "error": 500, "error_text": "Sorry, but the requested page is unavailable due to a server hiccup.", "img": img, "home": home}
+    context = {"url": home + url, "error": 500, "error_text": "Sorry, the requested page is unavailable due to a server hiccup.", "img": img, "home": home}
     return render(request, template, context)
