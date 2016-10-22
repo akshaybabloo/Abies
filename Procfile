@@ -1,1 +1,1 @@
-web: gunicorn Abies.wsgi
+web: gunicorn gollahallime.wsgi

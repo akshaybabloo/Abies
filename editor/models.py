@@ -1,17 +1,12 @@
-import datetime
-
 from django.db import models
-from django.utils import timezone
 
 
-class Article(models.Model):
-    article = models.TextField()
-    date = models.DateTimeField('Date Published', default= timezone.now, blank=True)
-    tags = models.CharField(max_length=500)
-    makePrivate = models.BooleanField(default=True)
+class Content(models.Model):
+    content_name = models.CharField(max_length=200, unique=False, default='Name of the field')
+    content = models.TextField(default="Write about you.")
 
-    def __str__(self):
-        return self.article
 
-    def was_published_recently(self):
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+class Editor(models.Model):
+    company_name = models.CharField(max_length=500, unique=False, default='Company name', blank=True)
+    person_name = models.CharField(max_length=500, unique=False, default='Person name')
+    maintenance = models.BooleanField(default=False)
