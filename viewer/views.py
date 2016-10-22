@@ -15,7 +15,7 @@ def page_not_found(request):
     img = static('img/404.png')
     home = settings.SHARE_URL
     template = "error.html"
-    context = {"url": home + url, "error": 404, "error_text": "Page not found.", "img": img, "home": home}
+    context = {"url": home + url, "error": 404, "error_text": "Oops, the page you're <br> looking for does not exist.", "img": img, "home": home, "extended_error_text": "You may want to head back to the homepage.<br/>If you think something is broken, report a problem."}
     return render(request, template, context)
 
 
