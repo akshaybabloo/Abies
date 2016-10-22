@@ -186,7 +186,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Common stuff
-from .production import *
+from .common import *
 ```
 
 ### 2.4 About `common.py`
