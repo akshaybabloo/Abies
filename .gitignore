@@ -136,7 +136,6 @@ fabric.properties
 
 # Abies
 /Abies/settings/local.py
-/Abies/settings/settings.ini
 
 Abies/settings.py
 
