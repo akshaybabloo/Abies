@@ -299,7 +299,7 @@
             r.handleStatusFetchFail(t)
         })
     };
-    var ep = new ErrorPage('body', "404", "plain");
+    var ep = new ErrorPage('body', "{{ error }}", "plain");
     ep.initialize();
 
     // hack to make sure content stays centered >_<
