@@ -18,9 +18,10 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^', include('viewer.urls')),
-    url(r'^editor/', include('editor.urls')),
+    url(r'^editor/', include('editor.urls'), name='editor_urls'),
+    url(r'^welcome/', include('welcome.urls'), name='welcome_urls'),
     url(r'^settings/', include('settings.urls')),
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls, name='admin_urls'),
 ]
 
 handler404 = 'viewer.views.page_not_found'
