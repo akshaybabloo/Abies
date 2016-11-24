@@ -1,28 +1,32 @@
-from django.shortcuts import render
-from django.contrib.staticfiles.templatetags.staticfiles import static
+from django.shortcuts import render, redirect
 from django.conf import settings
-import requests
+from editor.models import ContentModel
 
 
 def index(request):
     context = {}
-    template = "home.html"
+    template = "viewer/home.html"
+    try:
+        a = ContentModel.objects.get(ref_id='1')
+    except Exception as e:
+        return redirect('/welcome/')
     return render(request, template, context)
 
 
 def page_not_found(request):
     url = request.get_full_path()
-    img = static('img/404.png')
-    home = settings.SHARE_URL
+    home_link = settings.SHARE_URL
     template = "error.html"
-    context = {"url": home + url, "error": 404, "error_text": "Oops, the page you're looking for does not exist.", "img": img, "home": home, "extended_error_text": "You may want to head back to the homepage.<br/>If you think something is broken, report a problem."}
+    context = {"url": home_link + url, "error_code": 404,
+               "error_message": "Oops, the page you're <br/> looking for does not exist.", "home_link": home_link}
     return render(request, template, context)
 
 
 def server_error(request):
     url = request.get_full_path()
-    home = settings.SHARE_URL
-    img = static('img/500.png')
+    home_link = settings.SHARE_URL
     template = "error.html"
-    context = {"url": home + url, "error": 500, "error_text": "Sorry, the requested page is unavailable due to a server hiccup.", "img": img, "home": home}
+    context = {"url": home_link + url, "error_code": 500,
+               "error_message": "Sorry, but the requested page is unavailable <br/> due to a server hiccup.",
+               "home_link": home_link}
     return render(request, template, context)
