@@ -1,9 +1,21 @@
 from django.shortcuts import render
-
-# Create your views here.
-from django.http import HttpResponse
-import requests
+from editor.models import ContentModel
+from django.core.exceptions import ObjectDoesNotExist
 
 
 def index(request):
-    return HttpResponse("Coming soon")
+    context = {}
+    template = "editor/home.html"
+    try:
+        a = ContentModel.objects.get(ref_id='1')
+    except ContentModel.DoesNotExist as e:
+        return render(request, template, context)
+    except ObjectDoesNotExist as e:
+        return render(request, template, context)
+    return render(request, template, context)
+
+
+def login(request):
+    context = {}
+    template = "editor/login.html"
+    return render(request, template, context)
