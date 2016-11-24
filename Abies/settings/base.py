@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'editor',
     'viewer',
     'welcome',
+    'settings',
 ]
 
 MIDDLEWARE_CLASSES = [
