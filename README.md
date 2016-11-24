@@ -230,7 +230,7 @@ python manage.py createsuperuser
 
 ## 4 Running `run.ps1`
 
-To run the PowerShell script file, do the following:
+To run the PowerShell script, do the following:
 
 ```
 powershell -ExecutionPolicy ByPass -File run.ps1
