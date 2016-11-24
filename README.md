@@ -227,3 +227,11 @@ Open Terminal (Linux) or Command Prompt (Windows), navigate to `Abies` folder an
 python manage.py migrate
 python manage.py createsuperuser
 ```
+
+## 4 Running `run.ps1`
+
+To run the PowerShell script file, do the following:
+
+```
+powershell -ExecutionPolicy ByPass -File run.ps1
+```
