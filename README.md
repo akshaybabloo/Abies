@@ -235,3 +235,11 @@ To run the PowerShell script, do the following:
 ```
 powershell -ExecutionPolicy ByPass -File run.ps1
 ```
+
+## 5 Running `run.sh`
+
+To run the Bash script, do the following:
+
+```
+sh run.sh
+```
