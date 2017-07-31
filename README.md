@@ -1,3 +1,5 @@
+> Caution: This repo is not maintained anymore. See [gollahalli-com](https://github.com/akshaybabloo/gollahalli-com) for a different implementation.
+
 # Abies
 
 :evergreen_tree: A Django based all-in-one web creator.
