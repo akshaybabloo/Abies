@@ -1,4 +1,4 @@
-> Caution: This repo is not maintained anymore. See [gollahalli-com](https://github.com/akshaybabloo/gollahalli-com) for a different implementation.
+> Warning: This repo is not maintained anymore. See [gollahalli-com](https://github.com/akshaybabloo/gollahalli-com) for a different implementation.
 
 # Abies
 
